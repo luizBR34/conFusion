@@ -16,8 +16,6 @@ import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
