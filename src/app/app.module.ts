@@ -15,6 +15,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
