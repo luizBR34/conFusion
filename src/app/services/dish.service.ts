@@ -9,7 +9,15 @@ export class DishService {
 
   constructor() { }
 
-  getDished(): Dish[] {
+  getDishes(): Dish[] {
     return PRATOS;
+  }
+
+  getDish(id: string): Dish {
+    return PRATOS.filter((dish) => (dish.id === id))[0];
+  }
+
+  getFeatureDish(): Dish {
+    return PRATOS.filter((dish) => dish.featured)[0];
   }
 }
