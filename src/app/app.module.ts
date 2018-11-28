@@ -25,6 +25,10 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 
+import { HttpClientModule } from '@angular/common/http'; //REST HTTP
+import { HttpModule } from '@angular/http';
+import { baseURL } from './shared/baseurl'; //URL base do servidro
+
 import { RouterModule, Routes } from '@angular/router';
 import { routes } from './app-routing/routes';
 
@@ -48,6 +52,8 @@ import { routes } from './app-routing/routes';
     MatCardModule,
     MatButtonModule,
     // AppRoutingModule,
+    HttpClientModule,
+    HttpModule,
     RouterModule.forRoot(
       routes,
       { enableTracing: true } // <-- debugging purposes only
@@ -55,7 +61,8 @@ import { routes } from './app-routing/routes';
   ],
   providers: [
     DishService,
-    PromotionService
+    PromotionService,
+    { provide: 'baseURL', useValue: baseURL }
   ],
   bootstrap: [AppComponent]
 })
