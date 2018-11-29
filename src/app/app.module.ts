@@ -10,6 +10,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
@@ -17,6 +18,8 @@ import 'hammerjs';
 import { DishService } from './services/dish.service';
 
 import { PromotionService } from './services/promotion.service';
+
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
@@ -51,6 +54,7 @@ import { routes } from './app-routing/routes';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
+    MatProgressSpinnerModule,
     // AppRoutingModule,
     HttpClientModule,
     HttpModule,
@@ -62,6 +66,7 @@ import { routes } from './app-routing/routes';
   providers: [
     DishService,
     PromotionService,
+    ProcessHTTPMsgService,
     { provide: 'baseURL', useValue: baseURL }
   ],
   bootstrap: [AppComponent]

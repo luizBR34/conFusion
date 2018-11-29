@@ -19,7 +19,7 @@ export class PromotionService {
     return this.http.get<Promotion[]>(baseURL + 'promotions');
   }
 
-  getPromotion(id: string): Observable<Promotion> {
+  getPromotion(id: number): Observable<Promotion> {
     return this.http.get<Promotion>(baseURL + 'promotions/' + id);
   }
 

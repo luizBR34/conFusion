@@ -1,7 +1,7 @@
 import { Comentario } from './comentario';
 
 export class Dish {
-    id: string;
+    id: number;
     name: string;
     image: string;
     category: string;
