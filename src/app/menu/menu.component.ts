@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
   pratoSelecionado: Dish;
 
   constructor(private dishService: DishService,
-    @Inject('BaseURL') private BaseURL) { }
+    @Inject('baseURL') private baseURL) { }
 
   ngOnInit() {
 
@@ -23,8 +23,8 @@ export class MenuComponent implements OnInit {
     .subscribe((dishes) => this.dishes = PRATOS);
   }
 
-  onSelect(dish: Dish) {
+   onSelect(dish: Dish) {
     this.pratoSelecionado = dish;
-  }
+  } 
 
 }
